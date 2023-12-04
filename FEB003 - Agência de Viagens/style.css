@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.destinos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.destino {
+    background-color: rgb(206, 192, 224);
+    margin: 1px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(103, 14, 226);
+}
+
+.destino img {
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+    border-radius: 10px;
+}
+
+button {
+    background-color: rgb(0, 255, 76);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .destinos-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .destino {
+        width: calc(50% - 20px); 
+        margin: 10px;
+    }
+}
