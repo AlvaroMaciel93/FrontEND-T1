@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Agência de Turismo</title>
+</head>
+<body>
+    <div class="destinos-container">
+        <div class="destino">
+            <img src="https://revistaazul.voeazul.com.br/wp-content/uploads/2023/03/conheca-salvador-e-se-apaixone-pela-capital-baiana.jpeg" alt="Destino 1" width="300" height="200">
+            <h2>Salvador - BA</h2>
+            <p>O que está incluso no pacote:</p>
+            <!-- Detalhes do pacote -->
+            <p>✔ Aéreo ida e volta</p>
+            <p>✔ Três diárias</p>
+            <p>✔ Café da manhã</p>
+            <h3><p>Preço: R$670,00</p></h3>
+            <h5><p>Taxas Inclusas</p>
+            <p>Transferência ou Pix/Cartão em 10x sem juros</p></h5>
+            <button>Comprar</button>
+        </div>
+        <div class="destino">
+            <img src="https://a.cdn-hotels.com/gdcs/production74/d54/79c669d3-5325-4c3f-94d2-e76d7f3fabc4.jpg" alt="Destino 2" width="300" height="200">
+            <h2>Fortaleza - CE</h2>
+            <p>O que está incluso no pacote:</p>
+            <!-- Detalhes do pacote -->
+            <p>✔ Aéreo ida e volta</p>
+            <p>✔ Três diárias</p>
+            <p>✔ Café da manhã</p>
+            <h3><p>Preço: R$1513,00</p></h3>
+            <h5><p>Taxas Inclusas</p>
+            <p>Transferência ou Pix/Cartão em 10x sem juros</p></h5>
+            <button>Comprar</button>
+        </div>
+        <div class="destino">
+            <img src="https://direcional.com.br/wp-content/uploads/2021/03/campinas-3.jpg" alt="Destino 3" width="300" height="200">
+            <h2>Campinas - SP</h2>
+            <p>O que está incluso no pacote:</p>
+            <!-- Detalhes do pacote -->
+            <p>✔ Aéreo ida e volta</p>
+            <p>✔ Três diárias</p>
+            <p>✔ Café da manhã</p>
+            <h3><p>Preço: R$900,00</p></h3>
+            <h5><p>Taxas Inclusas</p>
+            <p>Transferência ou Pix/Cartão em 10x sem juros</p></h5>
+            <button>Comprar</button>
+        </div>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('button');
+
+        function capturarInformacoes(event) {
+            const destino = event.target.parentElement.querySelector('h2').textContent;
+            const detalhesPacote = Array.from(event.target.parentElement.querySelectorAll('p:not(:last-child)')).map(p => p.textContent.trim());
+            const preco = event.target.parentElement.querySelector('h3').textContent.trim();
+            const taxas = event.target.parentElement.querySelector('h5').textContent.trim();
+            
+            const pacoteTuristico = {
+                destino: destino,
+                detalhes: detalhesPacote,
+                preco: preco,
+                taxas: taxas
+            };
+
+            console.log(pacoteTuristico);
+        }
+
+        buttons.forEach(button => {
+            button.addEventListener('click', capturarInformacoes);
+        });
+    </script>
+</body>
+</html>

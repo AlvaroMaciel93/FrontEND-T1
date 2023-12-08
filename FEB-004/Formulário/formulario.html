@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_formulario.css">
+    <title>Formulário de Viagens</title>
+</head>
+<body>
+    <div class="form-container">
+        <form id="formViagens">
+            <h2>Formulário de Viagens</h2>
+            <div class="form-box">
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" required>
+            </div>
+            <div class="form-box">
+                <label for="imagem">URL da Imagem:</label>
+                <input type="text" id="imagem" name="imagem" required>
+            </div>
+            <div class="form-box">
+                <label for="detalhes">Detalhes do Pacote:</label>
+                <textarea id="detalhes" name="detalhes" required></textarea>
+            </div>
+            <div class="form-box">
+                <label for="preco">Preço:</label>
+                <input type="text" id="preco" name="preco" required>
+            </div>
+            <div class="form-box">
+                <label for="taxas">Taxas:</label>
+                <input type="text" id="taxas" name="taxas" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div class="resultado">
+        <h2>Dados do Formulário</h2>
+        <div id="dadosFormulario">
+            <h3>Visualização do Pacote</h3>
+            <div id="visualizacaoImagem"></div>
+            <p>Destino: <span id="spanDestino"></span></p>
+            <p>Detalhes: <span id="spanDetalhes"></span></p>
+            <p>Preço: <span id="spanPreco"></span></p>
+            <p>Taxas: <span id="spanTaxas"></span></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('formViagens').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            // Captura dos valores do formulário
+            const destino = document.getElementById('destino').value;
+            const urlImagem = document.getElementById('imagem').value;
+            const detalhes = document.getElementById('detalhes').value;
+            const preco = document.getElementById('preco').value;
+            const taxas = document.getElementById('taxas').value;
+
+            // Exibição dos dados capturados na tela
+            document.getElementById('spanDestino').textContent = destino;
+            const visualizacaoImagem = document.getElementById('visualizacaoImagem');
+            visualizacaoImagem.innerHTML = `<img src="${urlImagem}" alt="Imagem do Destino" width="200">`;
+            document.getElementById('spanDetalhes').textContent = detalhes;
+            document.getElementById('spanPreco').textContent = preco;
+            document.getElementById('spanTaxas').textContent = taxas;
+
+            // Exibição da imagem
+        });
+    </script>
+</body>
+</html>
