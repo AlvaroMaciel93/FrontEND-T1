@@ -35,7 +35,7 @@ function exibirNoticia(noticia: Noticia) {
   const noticiaHtml = `
     <h3>NOTÍCIAS</h3>
     <p>${noticia.titulo}</p>
-  `; // Estrutura HTML para exibir a notícia, você pode formatar conforme necessário
+  `;
   
   noticiasDiv.html(noticiaHtml);
 }
