@@ -1,0 +1,254 @@
+<style>
+  body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #f2f2f2;
+    color: rgb(54, 62, 130) 51, 51;
+}
+
+header {
+    background-color: #4c7caf;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+}
+
+.conteudo {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quadrados, .quadrados2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 15px;
+}
+
+.quadrado {
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quadradonoticias {
+    background-color: #dddddd;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quadradodestaque {
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*.quadrados2 {
+    padding: 15px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}*/
+
+.quadrado {
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quadradoresultados {
+    background-color: #dddddd;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 900px;
+}
+
+.miniquadrado{
+    background-color: #7d8ea8;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos responsivos */
+@media screen and (min-width: 500px) {
+    nav {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 499px) {
+    nav {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+</style>
+
+<app-header></app-header>
+<app-main>
+  <app-noticias></app-noticias>
+  <app-destaque></app-destaque>
+  <app-servicos></app-servicos>
+  <app-resultados></app-resultados>
+  <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.component.css">
+    <title>UESC - Universidade Estadual de Santa Cruz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>UESC - Universidade Estadual de Santa Cruz</h1>      
+    </header>
+
+    <main>
+        <section class="conteudo">
+            <h2>Bem-vindo à UESC</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="img">
+                <img src="https://scontent.ffec16-1.fna.fbcdn.net/v/t39.30808-6/299760427_474437994689435_569249429225728379_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=CLq5vcvahIwAX_kjX67&_nc_zt=23&_nc_ht=scontent.ffec16-1.fna&oh=00_AfBSkWjiJMyWn2Q0uAhWyJt2ODf2hWEISx8gjfjT58pufw&oe=65670D8F">
+            </div>
+            </section>
+
+    </header>
+
+    <main>
+        <div class="quadrados">
+                <div class="quadrado">
+                    <h3>MENU</h3>
+                    <p>
+                        <ul>
+                            <ul><a href="#">Home</a></li>
+                            <ul><a href="#">Cursos</a></li>
+                            <ul><a href="#">Mapa da UESC</a></li>
+                            <ul><a href="#">Núcleos</a></li>
+                            <ul><a href="#">Contato</a></li>
+                            <ul><a href="#">Projeto</a></li>
+                            <ul><a href="#">Protocolo</a></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="quadradonoticias">
+                    
+                    <h3><a href="noticias/noticias.component.html">NOTÍCIAS</a></h3>
+                    <p>Eleição para reitor e vice da UESC terá chapa única</p>
+                    <p><a href = "https://www2.uesc.br/noticias/916/Eleicao-para-Reitor-e-Vice">Pleito acontece em 28 de janeiro</a></p>
+                    <br>
+                    <p>Enade 2022</p>
+                    <p><a href = "https://www2.uesc.br/noticias/903/Curso-de-Administracao-da-Uesc-obtem-nota-maxima-no-Enade">Curso de Administração Obtém Nota Máxima</a></p>
+                    <br>
+                    <div class="miniquadrado">
+                    <p><a href="https://www2.uesc.br/noticias/">Mais Notícias</a></p>
+                    </div>
+                </div>
+                <div class="quadradodestaque">
+                    <h3><a href="destaque/destaque.component.html">DESTAQUE</a></h3>
+                    <p><a href = "http://www.uesc.br/a_uesc/calendario-academico.php">Calendário Acadêmico 2023</a></p>
+                    <br>
+                    <p><a href = "http://www.uesc.br/eleicao2024/">Eleicao para Reitor e Vice - 2024/2028</a></p>
+                
+                </div>
+            </div>
+            <div class="quadrados2">
+                <div class="quadrado">
+                    <h3><a href="servicos/servicos.component.html">SERVIÇOS</a></h3>
+                    <p>
+                        <ul>
+                            <ul><a href="https://www2.uesc.br/noticias/874/Outubro-Rosa-e-Novembro-Azul?">Outubro Rosa e Novembro Azul</a></li>
+                            <ul><a href="http://www.uesc.br/jornal/">Jornal da UESC</a></li>
+                            <ul><a href="https://www.prograd.uesc.br/PortalSagres/">Portal Acadêmico</a></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="quadradoresultados">
+                    <h3><a href="resultados/resultados.component.html">RESULTADOS</a></h3>
+                    <p>Pós graduação PROFNIT</p>
+                    <p><a href = "http://www.uesc.br/cursos/pos_graduacao/mestrado/profnit/index.php?item=conteudo_selecao.php">Resultado</a></p>
+                    <br>
+                    <p>Seleção Pública Professor Substituto</p>
+                    <p><a href = "http://www.uesc.br/selecao_publica/">Local de Prova</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 UESC - Universidade Estadual de Santa Cruz</p>
+    </footer>
+    <script src="C:\Users\user\Downloads\UESCZONA\script.js"></script>
+</body>
+</html>
+</app-main>
+<app-footer></app-footer>
+
+
+
+<router-outlet></router-outlet>
