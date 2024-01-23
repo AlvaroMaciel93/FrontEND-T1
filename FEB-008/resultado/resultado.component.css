@@ -1,0 +1,13 @@
+.resultado {
+    margin-top: 20px;
+  }
+  
+  .resultado div {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .resultado div:last-child {
+    border-bottom: none;
+  }
+  
