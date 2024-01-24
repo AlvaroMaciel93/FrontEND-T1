@@ -1,11 +1,11 @@
-// valor-propriedade.component.ts
+
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-valor-propriedade',
   template: `
     <div>
-      <!-- Exibir o valor da propriedade aqui -->
+
     </div>
   `,
   styles: [`
