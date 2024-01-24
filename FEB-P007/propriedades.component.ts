@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <div>
       <h3>Propriedades</h3>
-      <!-- Exibir as propriedades do veículo aqui -->
+      
     </div>
   `,
   styles: [`
